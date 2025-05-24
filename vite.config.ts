@@ -8,4 +8,7 @@ export default defineConfig({
   optimizeDeps: {
     exclude: ["@electric-sql/pglite"],
   },
+  worker: {
+    format: "es", // ✅ FIX: use ES format for workers (needed for Vercel/code-splitting)
+  },
 });
